@@ -5,11 +5,20 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "remix";
-import type { MetaFunction } from "remix";
+} from 'remix';
+import type { MetaFunction, LinksFunction } from 'remix';
+
+import styles from '../public/styles/tailwind.css';
+
+export const links: LinksFunction = () => {
+  return [{ rel: 'stylesheet', href: styles }];
+};
 
 export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
+  return {
+    title: 'Spotify Playlist Splitter',
+    description: 'Splits spotify playlists.',
+  };
 };
 
 export default function App() {
@@ -21,7 +30,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="h-full">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
