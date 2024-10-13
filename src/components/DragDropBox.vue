@@ -2,6 +2,7 @@
 import { useTemplateRef, onMounted, ref } from 'vue'
 
 const box = useTemplateRef<HTMLDivElement>('box')
+const ghost = useTemplateRef<HTMLDivElement>('ghost')
 
 onMounted(() => {
   if (box.value) {
@@ -14,31 +15,14 @@ onMounted(() => {
     }
 
     box.value.ondragstart = (event: DragEvent) => {
-      const ghostElement = document.createElement('div')
+      ghost
 
       event.dataTransfer.setDragImage(
-        ghostElement,
-        ghostElement.offsetWidth / 2,
-        ghostElement.offsetHeight / 2
+        ghost.value,
+        ghost.value.offsetWidth / 2,
+        ghost.value.offsetHeight / 2
       )
     }
-
-    // box.value.addEventListener('mousedown', (e) => {
-    //   x2.value = e.clientX
-    //   y2.value = e.clientY
-    // })
-
-    // box.value.addEventListener('mousemove', (e) => {
-    //   x1.value = x2.value - e.clientX
-    //   y1.value = y2.value - e.clientY
-    //   x2.value = e.clientX
-    //   y2.value = e.clientY
-
-    //   box.value.style.top = box.value.offsetTop - y1.value + 'px'
-    //   box.value.style.left = box.value.offsetLeft - x1.value + 'px'
-    // })
-
-    // box.value.addEventListener('mouseup', () => {})
   }
 })
 </script>
@@ -50,7 +34,8 @@ onMounted(() => {
       ref="box"
     ></div>
     <div
-      class="border-gray-400 rounded-md absolute top-0 -z-10 w-full h-20 border-2 border-dotted hover:border-gray-600"
+      class="border-gray-400 rounded-md absolute top-0 -z-10 w-full h-20 border-2 border-dotted hover:border-gray-600 rotate-3"
+      ref="ghost"
     ></div>
   </div>
 </template>

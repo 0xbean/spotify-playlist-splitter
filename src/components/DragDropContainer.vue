@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, useTemplateRef, onMounted } from 'vue'
+import { Droppable } from '@dnd-kit/dom'
 import DragDropBox from './DragDropBox.vue'
 
 const boxes = ref(0)

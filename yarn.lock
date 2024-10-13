@@ -377,6 +377,61 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dnd-kit/abstract@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@dnd-kit/abstract@npm:0.0.5"
+  dependencies:
+    "@dnd-kit/geometry": "npm:^0.0.5"
+    "@dnd-kit/state": "npm:^0.0.5"
+    tslib: "npm:^2.6.2"
+  checksum: 10c0/862f00a5ea360d7482815369b6a2aca90005471a62b9d2921b13e3b91a54e6153a21ada068c502ce1aab7a1a1fe434411a1745fe4510cba34debb0066890ad58
+  languageName: node
+  linkType: hard
+
+"@dnd-kit/collision@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@dnd-kit/collision@npm:0.0.5"
+  dependencies:
+    "@dnd-kit/abstract": "npm:^0.0.5"
+    "@dnd-kit/geometry": "npm:^0.0.5"
+    tslib: "npm:^2.6.2"
+  checksum: 10c0/dbba523b9275fe0a86b2f1b2f04be77014f68ff33ea1c26096378bb22fb00fc50367009d48f106d26944ff48a26d07b11caa2f88ed7b5bd11fafe33c2881fe6e
+  languageName: node
+  linkType: hard
+
+"@dnd-kit/dom@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@dnd-kit/dom@npm:0.0.5"
+  dependencies:
+    "@dnd-kit/abstract": "npm:^0.0.5"
+    "@dnd-kit/collision": "npm:^0.0.5"
+    "@dnd-kit/geometry": "npm:^0.0.5"
+    "@dnd-kit/state": "npm:^0.0.5"
+    tslib: "npm:^2.6.2"
+  checksum: 10c0/eba135fe08676d629ec818c3f8ab3ea07e2ab23d794cb484478cdc26018d4a52581df3be0cba5728e683a867eabf876ce88273dfb0d1d2e5442d3459fb538616
+  languageName: node
+  linkType: hard
+
+"@dnd-kit/geometry@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@dnd-kit/geometry@npm:0.0.5"
+  dependencies:
+    "@dnd-kit/state": "npm:^0.0.5"
+    tslib: "npm:^2.6.2"
+  checksum: 10c0/6bdc404c73da1f99ab0e88f774c5d651f0ad881929b1340120cc0d7ea66e7b4d9b0432a988854df1d28bb8d938c64407453c976257a01bb84adc2dfb715774e2
+  languageName: node
+  linkType: hard
+
+"@dnd-kit/state@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@dnd-kit/state@npm:0.0.5"
+  dependencies:
+    "@preact/signals-core": "npm:^1.6.0"
+    tslib: "npm:^2.6.2"
+  checksum: 10c0/c4f8cb7b3c0eb7a16c822dec30f24257502a81fda50b4d5594793313987f9a8eb2be317bb948dfa3e35143a5f5984993198923e8cf3b2f23731756abdc8950f9
+  languageName: node
+  linkType: hard
+
 "@esbuild/aix-ppc64@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/aix-ppc64@npm:0.21.5"
@@ -728,6 +783,13 @@ __metadata:
   version: 1.0.0-next.28
   resolution: "@polka/url@npm:1.0.0-next.28"
   checksum: 10c0/acc5ea62597e4da2fb42dbee02749d07f102ae7d6d2c966bf7e423c79cd65d1621da305af567e6e7c232f3b565e242d1ec932cbb3dcc0db1508d02e9a2cafa2e
+  languageName: node
+  linkType: hard
+
+"@preact/signals-core@npm:^1.6.0":
+  version: 1.8.0
+  resolution: "@preact/signals-core@npm:1.8.0"
+  checksum: 10c0/fa773157621d881e7aefddb8dbded805d8203600211040cc4b5907726e288a163fa58558c1d36bc7085d75e6488af0a806322bbbed005d08be76a76f40244246
   languageName: node
   linkType: hard
 
@@ -3910,6 +3972,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "spotify-playlist-splitter@workspace:."
   dependencies:
+    "@dnd-kit/abstract": "npm:^0.0.5"
+    "@dnd-kit/dom": "npm:^0.0.5"
     "@rushstack/eslint-patch": "npm:^1.8.0"
     "@tsconfig/node20": "npm:^20.1.4"
     "@types/node": "npm:^20.14.5"
